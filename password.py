@@ -28,3 +28,5 @@ class Credential:
         self.user_name = user_name
         self.email_address = email_address
         self.password = password
+
+# def delete_credential(  
