@@ -65,5 +65,17 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(len(Credential.credential_list),1)
 
 
+    def test_find_credential_by_user_name(self):
+        """
+        test to check if we can find a credential of a person by using the user name
+        """
+        self.new_credential.save_credential()
+        test_credential = Credential("Facebook","Chris","chinjesco@gmail.com","chris1") # new contact
+        test_credential.save_credential()
+
+        found_credential = Credential.find_by_user_name("Chris")
+        self.assertEqual(found_credential.email,test_credential.email)
+
+
 if __name__ == '__main__':
     unittest.main()
