@@ -3,6 +3,8 @@ Class Credential:
 Class that generates new instances of user credentials
 """
 
+    crededential_list = [] # Empty credential list
+
     def __init__(self,account_name,user_name,email_address,password)
 
     """
