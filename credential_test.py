@@ -26,6 +26,32 @@ class TestCredential(unittest.TestCase):
         for user_name in cls.credential_list:
             if Credential.user_name == name:
                 return credential
+    
+
+    @classmethod
+    def credential_exist(cls,name):
+        """
+        Method that checks if a credential exists from the credential list.
+        
+        Args:
+        name: User name to search if it exists
+        Returns:
+        Boolean: TRue or false depending if the credential exists
+        """
+        for credential in cls.credential_list:
+            if credential.user_name == name:
+                return True
+
+        return False
+
+
+    @classmethod
+    def display_credentials(cls):
+        """
+        method that returns the credential list
+        """
+        return cls.credential_list
+
 
 
     def setUp(self):
@@ -102,9 +128,19 @@ class TestCredential(unittest.TestCase):
         self.new_credential.save_credential()
         test_credential = Credential("Facebook","Chris","chinjesco@gmail.com","chris1") # new credential
         test_credential.save_credential()
+
         credential_exists = Credential.credential_exist("Chris")
 
         self.assertTrue(credential_exists)
+
+
+    def test_display_all_credentials(self):
+        """
+        method that returns a list of all credentials saved 
+        """
+
+
+        self.assertEqual(Credential.display_credentials(),Credential.credential_list)
 
 if __name__ == '__main__':
     unittest.main()
