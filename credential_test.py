@@ -11,6 +11,23 @@ class TestCredential(unittest.TestCase):
     """
 
 
+    @classmethod
+    def find_by_user_name(cls,name):
+        """
+        Method that takes in a user name and returns a credential that matches that user name
+        
+
+        Args:
+        user_name: user name to search for 
+        Returns:
+        Credential of someone who matches the user name.
+        """
+
+        for user_name in cls.credential_list:
+            if Credential.user_name == name:
+                return credential
+
+
     def setUp(self):
         """
         Set up method to run before each test cases.
@@ -74,8 +91,20 @@ class TestCredential(unittest.TestCase):
         test_credential.save_credential()
 
         found_credential = Credential.find_by_user_name("Chris")
-        self.assertEqual(found_credential.email,test_credential.email)
+        self.assertEqual(found_credential.email_address,test_credential.email_address)
 
+
+    def test_credential_exists(self):
+        '''
+        Test to check if we can return a Boolean if we can not find the contact.
+        '''
+
+        self.new_credential.save_credential()
+        test_credential = Credential("Facebook","Chris","chinjesco@gmail.com","chris1") # new credential
+        test_credential.save_credential()
+        credential_exists = Credential.credential_exist("Chris")
+
+        self.assertTrue(credential_exists)
 
 if __name__ == '__main__':
     unittest.main()
