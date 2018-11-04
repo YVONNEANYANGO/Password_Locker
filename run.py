@@ -105,3 +105,8 @@ def main():
                         break
                     else:
                         print("The code wasn't clear. Kindly use short codes")
+
+
+if __name__ == "__main__":
+
+    main()
