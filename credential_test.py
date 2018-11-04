@@ -1,5 +1,6 @@
 import unittest # Importing the unittest module 
 from password import Credential # Importing the credential class
+import pyperclip
 
 class TestCredential(unittest.TestCase):
 
@@ -53,6 +54,13 @@ class TestCredential(unittest.TestCase):
         return cls.credential_list
 
 
+    @classmethod
+    def copy_email(cls,name):
+        credential_found = Credential.find_by_name(name)
+        pyperclip.copy(credential_found.email)
+
+    
+    
 
     def setUp(self):
         """
@@ -141,6 +149,20 @@ class TestCredential(unittest.TestCase):
 
 
         self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+
+
+    def test_copy_email(self):
+        """
+        Test to confirm that we are copying the email address from a found credential
+        """
+
+
+        self.new_credential.save_credential()
+        Credential.copy_email("Chris")
+
+        self.assertEqual(self.new_credential.email,pyperclip.paste())
+
+
 
 if __name__ == '__main__':
     unittest.main()
