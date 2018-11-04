@@ -31,5 +31,16 @@ def find_credential(name):
     return Credential.find_by_name(name)
 
 
+def check_existing_credentials(name):
+    """
+    Function that check if a credential exists with that user name and return a Boolean
+    """
+    return Credential.credential_exist(name)
 
+
+def display_credentials():
+    """
+    Function that returns all the saved credentials
+    """
+    return Credential.display_credentials()
 
