@@ -15,21 +15,29 @@ Benefits for the users...Users are able to:-
 
  ## Behaviour Driven Development(BDD)
  
-To interract with the application Run ./run.py in the terminal to get a Welcome to Password_Locker
-**Input** Enter cc
-**Expected Result** Create a new account alert that will guide you in creating your credentials eg account_name,user_name
+* To interract with the application Run ./run.py in the terminal to get a Welcome to Password_Locker
 
-For application to Display Credentials
-**Input** Enter dc
-**Expected Result** Displays a list of saved Credentials
+  **Input** Enter cc
+  
+  **Expected Result** Create a new account alert that will guide you in creating your credentials eg account_name,user_name
 
-For application to find credentials by username
-**Input** Enter fc
-**Expected Result** Display credentials that matches the user name
+* For application to Display Credentials
 
-For user to exit the application
-**Input** Enter ex 
-**Expected Result** Exit credential list
+  **Input** Enter dc
+  
+  **Expected Result** Displays a list of saved Credentials
+
+* For application to find credentials by username
+
+  **Input** Enter fc
+  
+  **Expected Result** Display credentials that matches the user name
+
+* For user to exit the application
+
+  **Input** Enter ex 
+  
+  **Expected Result** Exit credential list
 
 
 ## SetUp/Installation Requirements
