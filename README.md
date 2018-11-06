@@ -15,15 +15,14 @@ Benefits for the users...Users are able to:-
 
  ## Behaviour Driven Development(BDD)
 
-Expected Behaviour                 |  Input                     | Output
+ Expected Behaviour                |  Input                     | Output
 -----------------------------------|----------------------------|----------------------------
  To interract with the application | Run ./run.py in terminal   | Welcome to Password_Locker
-Create a new credential            | Enter  cc                  | Enter new account name,                                       |                            | user name,email address 
+ Create a new credential           | Enter  cc                  | Enter new account name,                                                                        |                            | user name,email address 
                                    |                            | and password
- Display credentials               | Enter dc                   | Display a list of saved                                      |                            | Credentials 
-                                   | user name                  |
+ Display credentials               | Enter dc                   | Display a list of saved                                                                        |                            | Credentials                           
  Enter fc by username              | Enter fc                   | Displays credentials that
-                                   |                            | that matches the user name |                            |
+                                   |                            | that matches the user name                            
  Log out of the                    | Enter ex                   | Exit credential list
  account                           |                            | 
 
