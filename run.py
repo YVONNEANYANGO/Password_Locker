@@ -52,7 +52,7 @@ def main():
     print("\n")
 
     while True:
-        print(" Use these short codes : cc - create a new credential, dc - display credentials, fc -find a credential, ex -exit the credential list ")
+        print(" Use these short codes : cc - create a new credential, dc - display credentials, fc -find a credential, ex -exit the credential list, ")
 
         short_code = input().lower()
 
@@ -78,8 +78,8 @@ def main():
                 print("\n")
 
         elif short_code == "dc":
-                if display_credentials()
-                        print(Here is a list of all your credentials)
+                if display_credentials():
+                        print('Here is a list of all your credentials')
                         print("\n")
                         for credential in display_credentials():
                             print(f"{credential.account_name} {credential.user_name} .....{credential.email_address} ")
